@@ -40,7 +40,7 @@ RUN conda install -y \
 ## Install OpenCV 3
 RUN conda install -y -c menpo opencv3
 # some fix to opencv3
-RUN apt-get install -y -f libgtk2.0-0
+#RUN apt-get install -y -f libgtk2.0-0
 
 ## Install CUDA 9.0 support 
 RUN conda install -y -c soumith magma-cuda90
