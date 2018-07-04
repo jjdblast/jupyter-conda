@@ -39,6 +39,8 @@ RUN conda install -y \
 
 ## Install OpenCV 3
 RUN conda install -y -c menpo opencv3
+# some fix to opencv3
+RUN apt-get install -y libgtk2.0-0
 
 ## Install CUDA 9.0 support 
 RUN conda install -y -c soumith magma-cuda90
@@ -57,5 +59,3 @@ RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple http://download.pyto
 RUN conda install -y -c conda-forge nodejs 
 RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple jupyterlab \
     &&  jupyter labextension install @jupyterlab/hub-extension
-# some fix to opencv3
-RUN apt-get install -y libgtk2.0-0
